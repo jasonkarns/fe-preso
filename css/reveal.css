@@ -31,7 +31,9 @@ body {
   position: relative;
   line-height: 1;
   background-color: #fff;
-  color: #000; }
+  color: #000;
+  border-top: 2em solid #75fe04;
+}
 
 /*********************************************
  * VIEW FRAGMENTS
