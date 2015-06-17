@@ -1,0 +1,12 @@
+.reveal figure {
+  display: inline-block;
+  margin: 1em;
+}
+
+.reveal figure img {
+  border: 0;
+}
+
+.reveal figcaption {
+  font-size: 0.75em;
+}
