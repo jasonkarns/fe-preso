@@ -103,6 +103,8 @@
             <input type=number value=0 step=1 style="width:2em; font-size:2em; text-align:center;" />
             <input type=number value=0 step=1 style="width:2em; font-size:2em; text-align:center;" />
             <input type=number value=0 step=1 style="width:2em; font-size:2em; text-align:center;" />
+            <aside class="notes">
+              specificity: 1,2,4
           </section>
           <section>
             <pre><code>div.schedule.schedule.schedule ~ main *:not(:target) {}</code></pre>
@@ -110,6 +112,14 @@
             <input type=number value=0 step=1 style="width:2em; font-size:2em; text-align:center;" />
             <input type=number value=0 step=1 style="width:2em; font-size:2em; text-align:center;" />
             <input type=number value=0 step=1 style="width:2em; font-size:2em; text-align:center;" />
+            <aside class="notes">
+              specificity: 0,4,2
+              <ul>
+                <li> repeating a class selector increases specificity without changing the selection</li>
+                <li>universal selector adds 0</li>
+                <li>`:not` selector adds 0, but its contents do add</li>
+              </ul>
+            </aside>
           </section>
         </section>
 
