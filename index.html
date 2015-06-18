@@ -114,6 +114,91 @@
         </section>
 
         <section>
+          <section data-markdown>
+            # Box Model
+          </section>
+          <section class="box-model">
+            <div style="border-color:blue">
+              margin
+              <div style="border-color:fuchsia">
+                outline
+                <div style="border-color:green">
+                  border
+                  <div style="border-color:red">
+                    padding
+                    <div style="border-color:black">
+                      content
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section data-markdown>
+            ## box-sizing:
+
+            - content-box
+            - padding-box
+            - border-box
+          </section>
+          <section class="box-model">
+            <h2>box-sizing: content-box;</h2>
+            <div style="border-color:blue">
+              margin
+              <div style="border-color:fuchsia">
+                outline
+                <div style="border-color:green">
+                  border
+                  <div style="border-color:red">
+                    padding
+                    <div style="border-color:black; background:rgba(0,0,0,.25)">
+                      content
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section>
+            <div style="text-align:left;line-height:0;margin:auto;border:1px solid black;width:400px;padding:1em 0;"><div style="display:inline-block; background:rgba(255,0,0,.5);height:100px;width:200px;border:0px solid black;"></div><div style="border:0px solid black;background:rgba(0,0,255,.5);display:inline-block;height:100px;width:200px;"></div></div>
+          </section>
+          <section class="box-model">
+            <h2>box-sizing: border-box;</h2>
+            <div style="border-color:blue">
+              margin
+              <div style="border-color:fuchsia">
+                outline
+                <div style="border-color:green; background:rgba(0,0,0,.25)">
+                  border
+                  <div style="border-color:red">
+                    padding
+                    <div style="border-color:black">
+                      content
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section>
+            <div style="text-align:left;line-height:0;margin:auto;border:1px solid black;width:400px;padding:1em 0;"><div style="box-sizing:border-box;display:inline-block; background:rgba(255,0,0,.5);height:100px;width:200px;border:0px solid black;"></div><div style="border:0px solid black; box-sizing:border-box;background:rgba(0,0,255,.5);display:inline-block;height:100px;width:200px;"></div></div>
+          </section>
+          <section data-markdown>
+            ## resets
+
+            ```
+            * { box-sizing: border-box; }
+            ```
+            ```
+            *, *:before, *:after { box-sizing: border-box; }
+            ```
+            ```
+            html { box-sizing: border-box; }
+            *, *:before, *:after { box-sizing: inherit; }
+            ```
+          </section>
+        </section>
+        <section>
           <h2>Point of View</h2>
           <p>
             Press <strong>ESC</strong> to enter the slide overview.

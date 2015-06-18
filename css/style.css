@@ -10,3 +10,7 @@
 .reveal figcaption {
   font-size: 0.75em;
 }
+
+.box-model div {
+  border:1px solid;
+  margin: 0 1em 1em;
