@@ -268,6 +268,39 @@
         </section>
 
         <section>
+          <section data-markdown>
+            # Display
+          </section>
+
+          <section data-markdown>
+            - inline
+            - block
+            - inline-block
+            - table
+            - flex
+          </section>
+
+          <section data-markdown>
+            - inline
+              - doesn't accept height/width
+              - margin/padding only affect horizontal siblings
+            - block
+              - accepts height/width
+              - margin/padding affects vertical siblings as well
+              - get their own line (default to full width)
+            - inline-block
+              - accept height/width
+              - margin/padding affect vertical siblings as well
+              - flows inline (shrinkwraps content)
+          </section>
+
+          <section>
+            <p style="border:1px dotted lightgrey;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas congue ligula ac quam viverra nec <span style="display:inline; background:red;  height:1em; width: 5em; margin:.5em; padding: .5em; border: 1px solid;">inline</span> consectetur ante hendrerit. Praesent et diam eget libero egestas <span style="background:lightblue; display:inline-block; height:1em; width: 5em; margin:.5em; padding: .5em; border: 1px solid;">inline-block</span> mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. <span style="display:block; background:lightgreen; height:1.5em; width:auto; margin:1em; padding:1em; border:1px solid;">absolute</span> Donec ut libero sed arcu vehicula ultricies a non tortor.</p>
+          </section>
+
+        </section>
+
+        <section>
           <h2>Point of View</h2>
           <p>
             Press <strong>ESC</strong> to enter the slide overview.
