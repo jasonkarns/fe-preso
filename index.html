@@ -208,6 +208,59 @@
             ```
           </section>
         </section>
+
+        <section class="position">
+          <section data-markdown>
+            # position
+
+            - static
+            - relative
+            - absolute
+            - fixed
+          </section>
+
+          <section data-markdown>
+            ## document flow
+
+            ###### in document flow
+            static, relative
+
+            ###### out of document flow
+            absolute, fixed
+          </section>
+
+          <section data-markdown>
+            ## positioning context
+
+            ###### no context
+            static
+
+            ###### creates positioning and stacking context
+
+            relative, absolute absolute
+          </section>
+
+          <section data-markdown>
+            ## movement
+
+            - static: no movement
+
+            - relative: movement relative to original position
+
+            - absolute: movement relative to nearest positioned parent
+
+            - fixed: movement relative to document
+          </section>
+
+          <section>
+            <div style="border:1px solid black; padding:1em; position:relative; font-size:.75em;">
+              <p style="border:1px dotted lightgrey"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec <span style="position:static; background:red;top:0;left:0;">static</span> consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas <span style="outline:2px dashed grey"><span style="background:lightblue;position:relative;top:15px;left:25px;">relative</span></span> mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. <span style="outline:5px solid gray;"><span style="position:absolute;background:lightgreen;top:0;left:0">absolute</span></span> Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit.  </p>
+              <p style="border:1px dotted lightgrey; position:relative;overflow:auto;height:200px;"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec <span style="position:static; background:red;top:0;left:0;">static</span> consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas <span style="outline:2px dashed grey"><span style="background:lightblue;position:relative;top:15px;left:25px;">relative</span></span> mattis sit amet vitae augue. <span style="position:fixed;background:fuchsia;">fixed</span>Nam tincidunt congue enim, ut porta lorem lacinia consectetur. <span style="outline:5px solid gray;"><span style="position:absolute;background:lightgreen;top:0;left:0">absolute</span></span> Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit.  </p>
+
+            </div>
+          </section>
+        </section>
+
         <section>
           <h2>Point of View</h2>
           <p>
