@@ -389,41 +389,35 @@
           </section>
 
           <section data-markdown>
+            - alignment along *main axis*
+
             ``` css
             justify-content: flex-start | flex-end | center | space-between | space-around;
             ```
 
             ![](img/flexbox-justify-content.svg)
-
-            Note:
-
-            - alignment along *main axis*
           </section>
 
           <section data-markdown>
+            - alignment along cross axis
+              - dual of justify-content
+
             ``` css
             align-items: flex-start | flex-end | center | baseline | stretch;
             ```
 
             ![](img/flexbox-align-items.svg)
-
-            Note:
-
-            - alignment along cross axis
-              - dual of justify-content
           </section>
 
           <section data-markdown>
+            - alignment of *lines* along main axis
+              - dual of justify-content but for rows/columns, not items
+
             ``` css
             align-content: flex-start | flex-end | center | space-between | space-around | stretch;
             ```
 
             ![](img/flexbox-align-content.svg)
-
-            Note:
-
-            - alignment of *lines* along main axis
-              - dual of justify-content but for rows/columns, not items
           </section>
 
           <section data-markdown>
@@ -435,6 +429,51 @@
               - flex-shrink
               - flex-basis
             - align-self
+          </section>
+
+          <section data-markdown>
+            specify non-source order of individual items
+
+            ``` css
+            order: &lt;integer>;
+            ```
+
+            Note:
+
+            - defaults to 0
+            - can be negative
+          </section>
+
+          <section data-markdown>
+            control width (height) of individual items
+
+            ``` css
+            flex-grow: &lt;number>;
+            flex-shrink: &lt;number>;
+            flex-basis: &lt;length> | auto;
+            ```
+
+            ``` css
+            flex: &lt;'flex-grow'> &lt;'flex-shrink'> &lt;'flex-basis'>;
+            ```
+
+            ![](img/flexbox-flex-grow.svg)
+
+            Note:
+
+            - flex defaults to 0, 1, auto
+            - can't be negative
+          </section>
+
+          <section data-markdown>
+            control cross-axis alignment of individual items
+
+            ``` css
+            align-self: auto | flex-start | flex-end | center | baseline | stretch;
+            ```
+
+            ![](img/flexbox-align-self.svg)
+
           </section>
 
           <section data-markdown>
