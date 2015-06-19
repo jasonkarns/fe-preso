@@ -328,7 +328,119 @@
 
         </section>
 
+        <section>
+          <section data-markdown>
+            # flex box
+          </section>
 
+          <section data-markdown>
+            # terminology
+
+            - flex-container
+            - flex-item
+            - main axis
+            - cross axis
+          </section>
+
+          <section data-markdown>
+            ![](img/flexbox.png)
+          </section>
+
+          <section data-markdown>
+            ## container properties
+
+            - display
+            - flex-flow
+              - flex-direction
+              - flex-wrap
+            - justify-content
+            - align-items
+            - align-content
+          </section>
+
+          <section data-markdown>
+            ```
+            display: flex;
+            ```
+
+            - creates a flex container
+            - its children are automatically flex items
+              - can also be containers themselves
+          </section>
+
+          <section data-markdown>
+            ``` css
+            flex-flow: &lt;'flex-direction'> || &lt;'flex-wrap'>
+            ```
+
+            ``` css
+            flex-direction: row | row-reverse | column | column-reverse;
+            ```
+
+            ``` css
+            flex-wrap: nowrap | wrap | wrap-reverse;
+            ```
+
+            Note:
+
+            - flow is shorthand
+            - direction depends on ltr/rtl
+            - wrap depends on direction
+          </section>
+
+          <section data-markdown>
+            ``` css
+            justify-content: flex-start | flex-end | center | space-between | space-around;
+            ```
+
+            ![](img/flexbox-justify-content.svg)
+
+            Note:
+
+            - alignment along *main axis*
+          </section>
+
+          <section data-markdown>
+            ``` css
+            align-items: flex-start | flex-end | center | baseline | stretch;
+            ```
+
+            ![](img/flexbox-align-items.svg)
+
+            Note:
+
+            - alignment along cross axis
+              - dual of justify-content
+          </section>
+
+          <section data-markdown>
+            ``` css
+            align-content: flex-start | flex-end | center | space-between | space-around | stretch;
+            ```
+
+            ![](img/flexbox-align-content.svg)
+
+            Note:
+
+            - alignment of *lines* along main axis
+              - dual of justify-content but for rows/columns, not items
+          </section>
+
+          <section data-markdown>
+            ## layout-workshop w/ flex
+          </section>
+
+          <section data-markdown>
+            ## item properties
+
+            - order
+            - flex
+              - flex-grow
+              - flex-shrink
+              - flex-basis
+            - align-self
+          </section>
+        </section>
 
         <section>
           <h2>Point of View</h2>
