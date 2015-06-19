@@ -16,3 +16,27 @@
   border:1px solid;
   margin: 0 1em 1em;
 }
+
+.rwd-demo h1 {
+  color: black;
+}
+@media (min-width: 450px) {
+  .rwd-demo h1 {
+    color: red;
+  }
+}
+@media (min-width: 650px) {
+  .rwd-demo h1 {
+    color: blue;
+  }
+}
+@media (min-width: 850px) {
+  .rwd-demo h1 {
+    color: green;
+  }
+}
+@media (min-width: 1050px) {
+  .rwd-demo h1 {
+    color: fuchsia;
+  }
+}

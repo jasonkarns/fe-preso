@@ -484,13 +484,67 @@
         </section>
 
         <section>
-          <h2>Point of View</h2>
-          <p>
-            Press <strong>ESC</strong> to enter the slide overview.
-          </p>
-          <p>
-            Hold down alt and click on any element to zoom in on it using <a href="http://lab.hakim.se/zoom-js">zoom.js</a>. Alt + click anywhere to zoom back out.
-          </p>
+          <section data-markdown>
+            # Media Queries
+          </section>
+
+          <section data-markdown>
+            # media-type
+
+            ``` html
+            &lt;link rel='stylesheet' media='print' href='css/print.css' />
+            ```
+
+            ``` css
+            background: url(some-image.png);
+            color: red;
+
+            @media print {
+              background: white;
+              color: black;
+            }
+            ```
+          </section>
+
+          <section data-markdown>
+            # media-feature
+
+            ``` html
+            &lt;link rel='stylesheet' media='all and (min-width: 701px) and (max-width: 900px)' href='css/medium.css' />
+            ```
+
+            ``` css
+            @media all and (min-width: 701px) and (max-width: 900px) {
+              #sidebar a {
+                /* special styles for small screen
+              }
+            }
+            ```
+
+            Note:
+
+            - only is used to block older browsers
+            - can combine media-type + media-feature or separate
+          </section>
+
+          <section data-markdown>
+            # features
+
+            - height/width, device-height/device-width
+            - aspect-ratio, device-aspect-ratio
+            - color, color-index, monochrome
+            - resolution
+            - orientation
+
+            Note:
+
+            - min/max variants of all of them (except orientation)
+          </section>
+
+          <section class="rwd-demo">
+            <h1>Demo</h1>
+          </section>
+
         </section>
 
         <section>
