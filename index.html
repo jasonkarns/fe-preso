@@ -690,6 +690,8 @@
             - forms
             - internationalization
           </section>
+        </section>
+        <section>
           <section data-markdown>
             ## sectioning elements
 
@@ -707,6 +709,8 @@
             - section, article, aside, nav are section roots
             - hgroup is out of w3c spec but still in whatwg spec
           </section>
+        </section>
+        <section>
           <section data-markdown>
             ## multimedia
 
@@ -770,6 +774,52 @@
 
             - properties:
               - autoplay, controls, buffered, currentSrc, loop, duration, ended, muted, paused, played, seekable, seeking, src, volume
+          </section>
+          <section data-markdown>
+            ## picture, @srcset, @sizes
+            ```
+            &lt;picture>
+              &lt;source srcset="mdn-logo-wide.png" media="(min-width: 600px)" type="image/png" />
+              &lt;source srcset="mdn-logo.svg" media="(min-width:200px)" type="image/svg+xml" />
+              &lt;img src="mdn-logo-narrow.png" alt="MDN">
+            &lt;/picture>
+
+            &lt;img src="small.jpg"
+                 srcset="large.jpg 1024w, medium.jpg 640w, small.jpg 320w"
+                 sizes="(min-width: 36em) 33.3vw, 100vw"
+                 alt="A bad wolf" />
+            ```
+
+            Note:
+
+            - [picturefill](https://scottjehl.github.io/picturefill/)
+            - [srcset/sizes](https://ericportis.com/posts/2014/srcset-sizes/)
+          </section>
+          <section data-markdown>
+            ## figure, figcaption
+
+            Self-contained content that is tangential or referential to the main content. Think anything that would go in an appendix.
+
+            - referential images
+            - illustrations
+            - diagrams
+            - code samples/snippets
+            - data tables
+          </section>
+          <section data-markdown>
+            ```
+            &lt;figure>
+              &lt;img src="data-graph.png">
+              &lt;figcaption>Fig1. Data points through the years&lt;/figcaption>
+            &lt;/figure>
+
+            &lt;figure>
+              &lt;figcaption>install command for Lineman&lt;/figcaption>
+              &lt;pre>&lt;code class="lang-shell">
+                npm install -g lineman
+              &lt;/code>&lt;/pre>
+            &lt;/figure>
+            ```
           </section>
         </section>
         <section>
