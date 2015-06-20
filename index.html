@@ -550,6 +550,23 @@
             - min/max variants of all of them (except orientation)
           </section>
 
+          <section data-markdown>
+            ## JS API
+
+            ``` js
+            mql = window.matchMedia("(min-width:50em)")
+            ```
+
+            - `matches`: boolean
+            - `media`: serialized media list
+            - `addListener`
+            - `removeListener`
+
+            Note:
+
+              listeners fire whenever the window switches state from matching the MQL to not matching, or vice versa
+          </section>
+
           <section class="rwd-demo">
             <h1>Demo</h1>
           </section>
