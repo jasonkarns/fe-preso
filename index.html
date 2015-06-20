@@ -1118,6 +1118,53 @@
           </section>
         </section>
         <section>
+          <section data-markdown>
+            ## file api
+
+            read files asyncronously
+
+          </section>
+          <section data-markdown>
+            ## properties/methods
+
+            - `error`
+            - `readyState`
+            - `result`
+            - `abort()`
+            - `readAsArrayBuffer(file)`
+            - `readAsBinaryString(file)`
+            - `readAsDataURL(file)`
+            - `readAsText(file)`
+          </section>
+          <section data-markdown>
+            ## events
+
+            - `abort`
+            - `error`
+            - `load` (fired if successful)
+            - `loadstart`
+            - `loadend` (fired for both success and failure results)
+            - `progress`
+
+            Note:
+
+            - each of these can be attached using element.on{event} or addEventListener
+          </section>
+          <section data-markdown>
+            ## example
+
+            ``` js
+            var reader = FileReader();
+            reader.addEventListener('load', function(event) {
+              event.result // type depends on readAs____
+            });
+            // file from an &lt;input>'s `FileList`
+            // or drag/drop operation's DataTransfer object
+            reader.readAsText(file);
+            ```
+          </section>
+        </section>
+        <section>
           <section id="fragments">
             <h2>Fragments</h2>
             <p>Hit the next arrow...</p>
