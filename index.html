@@ -725,7 +725,7 @@
           <section data-markdown>
             ## audio
 
-            ```
+            ``` html
             &lt;audio src="foo.ogg">
               &lt;track kind="captions" src="foo.en.vtt" srclang="en" label="English">
               &lt;track kind="captions" src="foo.sv.vtt" srclang="sv" label="Svenska">
@@ -746,7 +746,7 @@
           <section data-markdown>
             ## video
 
-            ```
+            ``` html
             &lt;video controls>
               &lt;source src="vid.mp4" type="video/mp4" />
               &lt;source src="vid.ogv" type="video/ogg" />
@@ -777,7 +777,7 @@
           </section>
           <section data-markdown>
             ## picture, @srcset, @sizes
-            ```
+            ``` html
             &lt;picture>
               &lt;source srcset="mdn-logo-wide.png" media="(min-width: 600px)" type="image/png" />
               &lt;source srcset="mdn-logo.svg" media="(min-width:200px)" type="image/svg+xml" />
@@ -807,7 +807,7 @@
             - data tables
           </section>
           <section data-markdown>
-            ```
+            ``` html
             &lt;figure>
               &lt;img src="data-graph.png">
               &lt;figcaption>Fig1. Data points through the years&lt;/figcaption>
@@ -820,6 +820,112 @@
               &lt;/code>&lt;/pre>
             &lt;/figure>
             ```
+          </section>
+        </section>
+        <section>
+          <section data-markdown>
+            ## interactive elements
+
+            - `summary`, `details`
+            - `dialog` (also `&lt;form method="dialog"&gt;`)
+            - `menu`, `menuitem`
+
+            Note:
+
+            - not well implemented yet
+          </section>
+        </section>
+        <section>
+          <section data-markdown>
+            ## semantic elements
+
+            see also:
+            - [microformats](http://microformats.org/)
+            - [microdata](https://html.spec.whatwg.org/multipage/microdata.html)
+          </section>
+          <section data-markdown>
+            ## misc. semantic elements
+
+            ``` html
+            Heat oven to &lt;meter min="200" max="500">350 degrees&lt;/meter>
+
+            &lt;progress value="70" max="100">70 %&lt;/progress>
+
+            Training is on &lt;time datetime="2001-05-15 19:00">May 15&lt;/time>
+            ```
+
+            Note:
+
+            - meter's value is first number in content
+            - meter can be associated with a form
+            - progress also has :indeterminate pseudo-class
+            - re: time - microdata/microformats. ISO
+          </section>
+          <section data-markdown>
+            ## emphasis
+
+            - `i`: "alternate voice or mood"
+
+                transliterated foreign words, idiomatic phrases, technical terms, typographically italized text (like a ship name)
+
+            - `b`: "sylistically offset"
+
+                product names in a review, keywords in search results
+
+            - `em`: "stress emphasis" (linguistic stress)
+
+            - `strong`: "strong emphasis"
+
+            Note:
+
+            - nest `strong`s for relative importance
+            - e.g. `"Call the doctor &lt;em>now&lt;/em>!"`
+            - e.g. `&lt;strong>Warning&lt;/strong> Danger ahead`
+            - [html doctor](http://html5doctor.com/i-b-em-strong-element/)
+          </section>
+          <section data-markdown>
+            ## citations
+
+            - `q`: a quotation
+
+            - `cite`: reference to a work (book, show, author, speaker)
+
+            - `blockquote`: container for block-level quotation elements (including `q`, `cite`, and `mark`)
+
+            - `mark`: highlighted word for reference purposes
+
+            Note:
+
+            - blockquote can have @cite attribute
+            - [html doctor](http://html5doctor.com/cite-and-blockquote-reloaded/)
+          </section>
+          <section data-markdown>
+            ## citation example
+
+            ``` html
+            &lt;blockquote cite="https://twitter.com/horse_js/status/612273241755770880">
+
+              &lt;q>&lt;mark>you're&lt;/mark> doing Node wrong&lt;/q>
+
+              &lt;footer>
+                - &lt;a href="https://twitter.com/horse_js">@&lt;cite>horse_js&lt;/cite>&lt;/a>
+              &lt;/footer>
+
+            &lt;/blockquote>
+
+            &lt;p>The usage of "you're" was suprisingly correct&lt;/p>
+            ```
+          </section>
+          <section data-markdown>
+            ## edits
+
+            - `ins`: text that has been added to document (@cite, @datetime attributes)
+            - `del`: text that has been deleted from a document (@cite, @datetime attributes)
+            - `s`: text that is no longer valid, but doesn't represent an edit
+
+            Note:
+
+            - [html doctor](http://html5doctor.com/ins-del-s/)
           </section>
         </section>
         <section>
