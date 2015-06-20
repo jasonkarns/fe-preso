@@ -40,3 +40,35 @@
     color: fuchsia;
   }
 }
+
+.lvfha a:active {
+  color: fuchsia;
+}
+.lvfha a:visited {
+  color: rebeccapurple;
+}
+.lvfha a:focus {
+  color: limegreen;
+}
+.lvfha a:hover {
+  color: red;
+}
+.lvfha a:link {
+  color: blue;
+}
+
+.lvfha a ~ a:link {
+  color: blue;
+}
+.lvfha a ~ a:visited {
+  color: rebeccapurple;
+}
+.lvfha a ~ a:focus {
+  color: limegreen;
+}
+.lvfha a ~ a:hover {
+  color: red;
+}
+.lvfha a ~ a:active {
+  color: fuchsia;
+}
