@@ -1213,6 +1213,45 @@
           </section>
         </section>
         <section>
+          <section data-markdown>
+            ## cross window messaging
+          </section>
+          <section data-markdown>
+            ## sender
+
+            ``` js
+            otherWindow.postMessage(message, targetOrigin, data)
+            ```
+
+            - `targetOrigin` must match the URL of the target page (can be `"*"`)
+            - `otherWindow` can be an iframe, separate window, or WebWorker
+              - `iframeElement.contentWindow`
+              - `window.open(url)`
+              - `new Worker(scriptUrl)`
+          </section>
+          <section data-markdown>
+            ## receiver
+
+            ``` js
+            window.addEventListener('message', function(event){});
+            ```
+            - event.data
+            - event.origin
+              - host/port of sender
+            - event.source
+              - the sender's window object (in order to reply)
+          </section>
+          <section data-markdown>
+            ## tips
+
+            - windows must be loaded and have had their message listeners registered before messages can be received
+              - best to have iframes signal to parent when they're ready to receive
+            - be sure to check message origin. many widgets post messages
+            - messages are async so sender won't know receipt status
+            - windows can't share data: ownership is transferred if sent
+          </section>
+        </section>
+        <section>
           <section id="fragments">
             <h2>Fragments</h2>
             <p>Hit the next arrow...</p>
