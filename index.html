@@ -1165,6 +1165,54 @@
           </section>
         </section>
         <section>
+          <section data-markdown>
+            ## Drop Targets
+
+            must cancel `dragover` event for given element
+
+            ```js
+            el.ondragover=function(event) { event.preventDefault() }
+            el.addEventListener('dragover', function(event) { return false; })
+            ```
+          </section>
+          <section data-markdown>
+            ## events
+
+            - `dragenter`
+              - fired on an element when a drag operation enters it's border
+              - do styling in this event
+            - `dragover`
+              - fires repeatedly while over the element
+            - `drop`
+              - fires when a drop occurs
+            - `dragleave`
+              - fired when drag leaves (by drag or cancel or drop)
+          </section>
+          <section data-markdown>
+            ## data transfer object
+
+            - holds data from drag/drop operations.
+            - is available from `event.dataTransfer` of any drag event
+            - `files` property contains FileList of files dragged into browser window
+          </section>
+          <section data-markdown>
+            ## Dragging Elements
+
+            1. use `draggable` attribute on element
+            1. handle `dragstart` event (fires on dragged element)
+            1. may add/manipulate data in dataTransfer
+              - (`setData`, `getData`, `clearData`)
+            1. provide visual drop feedback
+              - (`dropEffect`, `effectAllowed`, `setDragImage`)
+            1. handle `dragend` event (fires on dragged element)
+
+            Note:
+
+            - dragstart/dragend are the dragged-element's duals to
+            drop elements dragenter/dragleave
+          </section>
+        </section>
+        <section>
           <section id="fragments">
             <h2>Fragments</h2>
             <p>Hit the next arrow...</p>
