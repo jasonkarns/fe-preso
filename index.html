@@ -989,6 +989,76 @@
           </section>
         </section>
         <section>
+          <section data-markdown>
+            ## DOM querying, traversal, manipulation
+          </section>
+          <section data-markdown>
+            ## querying
+
+            - querySelector
+
+              ``` js
+              element = baseElement.querySelector(selectors);
+              ```
+
+            - querySelectorAll
+
+              ``` js
+              elementList = baseElement.querySelectorAll(selectors);
+              ```
+
+            - matches
+
+              ``` js
+              result = baseElement.matches(selectorString)
+              ```
+
+            Note:
+            - queryselector returns null or single item
+            - queryselectorall returns non-live list
+            - matches returns true/false
+          </section>
+          <section data-markdown>
+            ## traversal
+
+            ``` js
+            el.children;
+            el.firstElementChild;
+            el.lastElementChild;
+            el.nextElementSibling;
+            el.previousElementSibling;
+            ```
+
+            Note:
+
+            [element traversal api](https://developer.mozilla.org/en-US/docs/Web/API/ElementTraversal)
+          </section>
+          <section data-markdown>
+            ## manipulation
+
+            ``` js
+            el.outerHTML = "&lt;p>replacement html&lt;/p>"
+
+            // location one of: beforebegin, afterbegin, beforeend, afterend
+            el.insertAdjacentHTML(location, "&lt;p>new paragraph&lt;/p>");
+            ```
+          </section>
+          <section data-markdown>
+            ## misc
+
+            ``` js
+            // is el an ancestor of otherEl?
+            result = el.contains(otherEl);
+
+            // create a new document. useful for sanitization or parsing
+            otherDoc = document.implementation.createHTMLDocument(title);
+
+            // what element currently has focus?
+            el = document.activeElement
+            ```
+          </section>
+        </section>
+        <section>
           <section id="fragments">
             <h2>Fragments</h2>
             <p>Hit the next arrow...</p>
