@@ -64,6 +64,8 @@
           - Box Model
           - Position
           - Display
+          - Media Queries
+          - Responsive Design
         </section>
 
         <section data-markdown>
@@ -76,6 +78,10 @@
               1. external: `&lt;link rel=stylesheet /&gt;`
               2. embedded: `&lt;style type=text/css&gt;`
               3. inline: `&lt;div style=""&gt;`
+
+          Note:
+
+          - matters more now, with `initial` being a thing
         </section>
 
         <section>
@@ -331,6 +337,8 @@
         <section>
           <section data-markdown>
             # flex box
+
+            [css-tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
           </section>
 
           <section data-markdown>
@@ -516,7 +524,7 @@
             ``` css
             @media all and (min-width: 701px) and (max-width: 900px) {
               #sidebar a {
-                /* special styles for small screen
+                /* special styles for small screen */
               }
             }
             ```
@@ -545,6 +553,70 @@
             <h1>Demo</h1>
           </section>
 
+          <section data-markdown>
+            # recommendations
+
+            - default to "mobile" view
+            - use rems and/or ems as breakpoints
+            - don't bound both ends of spectrum
+            - don't use "device breakpoints"
+          </section>
+        </section>
+
+        <section data-markdown>
+          # Responsive Design
+
+          <section>
+            salt mines device lab
+          </section>
+        </section>
+
+        <section>
+          <section data-markdown>
+            # CSS Units
+
+            [which to use when](http://demosthenes.info/blog/775/Which-CSS-Measurements-To-Use-When)
+          </section>
+
+          <section data-markdown>
+            - pixels (px)
+              * use for: hairline borders/box-shadows
+              * don't use for: typography, `@media` breakpoints
+            - percentages (%)
+              * use for: container dimensions
+              * don't use for: typography
+            - em, ex
+              * use for: typography and related (margin/padding)
+            - rem
+              * use for: same as em/ex, better for `@media` breakpoints
+          </section>
+          <section data-markdown>
+            - points, picas (pt, pc)
+              * use for: print typography/images/etc stylesheets
+              * don't use for: anything else
+            - inches, centimeters (in, cm)
+              * use for: print style margins/container dimensions
+              * don't use for: anything else
+          </section>
+          <section data-markdown>
+            - character (ch)
+              * use for: adjusting monospace typography
+
+            - viewport height/width (vh, vw)
+              * use for: responsive typography (headers), responsive containers
+              * don't use for: `@media` breakpoints
+            - unitless (raw numbers)
+              * use for: `line-height`, `border-image`
+            </section>
+        </section>
+
+        <section data-markdown>
+          # References
+
+          - [css-tricks](http://css-tricks.com/)
+          - [demosthenes](http://demosthenes.info/)
+          - [codrops](http://tympanus.net/codrops/)
+          - [mdn - css](https://developer.mozilla.org/en-US/docs/Web/CSS)
         </section>
 
         <section>
