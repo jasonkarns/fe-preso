@@ -1048,14 +1048,28 @@
 
             ``` js
             // is el an ancestor of otherEl?
-            result = el.contains(otherEl);
+            result = el.contains(otherEl)
+            ```
 
+            ``` js
             // create a new document. useful for sanitization or parsing
-            otherDoc = document.implementation.createHTMLDocument(title);
+            otherDoc = document.implementation.createHTMLDocument(title)
+            ```
 
+            ``` js
             // what element currently has focus?
             el = document.activeElement
             ```
+
+            ``` js
+            // base64 encoding
+            encodedData = window.btoa("Hello, world")
+            decodedData = window.atob(encodedData)
+            ```
+
+            Note:
+
+            - base64 encoding especially useful for data-uris, canvas, and with fileapi
           </section>
         </section>
         <section>
