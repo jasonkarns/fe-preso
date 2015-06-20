@@ -707,6 +707,70 @@
             - section, article, aside, nav are section roots
             - hgroup is out of w3c spec but still in whatwg spec
           </section>
+          <section data-markdown>
+            ## multimedia
+
+            - `audio`
+            - `video`
+            - `picture`
+            - `track` (for audio/video)
+            - `source` (for audio/video/picture)
+            - `embed`
+            - `figure`/`figcaption`
+          </section>
+          <section data-markdown>
+            ## audio
+
+            ```
+            &lt;audio src="foo.ogg">
+              &lt;track kind="captions" src="foo.en.vtt" srclang="en" label="English">
+              &lt;track kind="captions" src="foo.sv.vtt" srclang="sv" label="Svenska">
+              Fallback text. Like a &lt;a href="foo.ogg">download link&lt;/a>
+            &lt;/audio>
+
+            &lt;audio>
+              &lt;source src="foo.ogg" type="audio/ogg">
+              &lt;source src="foo.wav" type="audio/wav">
+
+              &lt;track kind="captions" src="foo.en.vtt" srclang="en" label="English">
+              &lt;track kind="captions" src="foo.sv.vtt" srclang="sv" label="Svenska">
+
+              Fallback text. Like a &lt;a href="foo.ogg">download link&lt;/a>
+            &lt;/audio>
+            ```
+          </section>
+          <section data-markdown>
+            ## video
+
+            ```
+            &lt;video controls>
+              &lt;source src="vid.mp4" type="video/mp4" />
+              &lt;source src="vid.ogv" type="video/ogg" />
+              &lt;track kind="subtitles" src="foo.en.vtt" srclang="en" label="English">
+              &lt;track kind="subtitles" src="foo.sv.vtt" srclang="sv" label="Svenska">
+              &lt;object type="application/x-shockwave-flash" data="vid.swf">
+                &lt;param name="movie" value="vid.swf" />
+                &lt;img src="vid.png" />&lt;br/>
+                Download the video:
+                &lt;a href="vid.mp4"/>mp4&lt;/a>,
+                &lt;a href="vid.ogv">ogg&lt;/a>
+              &lt;/object>
+            &lt;/video>
+            ```
+
+            Note:
+
+            [video for everybody](http://camendesign.com/code/video_for_everybody)
+          </section>
+          <section data-markdown>
+            ## JS API
+
+            - methods:
+              - play, pause, fastSeek, canPlayType
+
+            - properties:
+              - autoplay, controls, buffered, currentSrc, loop, duration, ended, muted, paused, played, seekable, seeking, src, volume
+          </section>
         </section>
         <section>
           <section id="fragments">
