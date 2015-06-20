@@ -1091,6 +1091,33 @@
           </section>
         </section>
         <section>
+          <section data-markdown>
+            ## history api
+
+            ``` js
+            // add new state to history
+            history.pushState(stateObject, title, url)
+
+            // query current state
+            var currentState = history.state;
+
+            // listen to popstate event
+            window.addEventListener('popstate', function(event){
+              event.state // the state object to which was just navigated
+            }
+            ```
+
+            Note:
+
+            - stateObject can be anything serializable
+            - title is usually ignored. empty string is fine
+            - url can be relative or absolute
+          </section>
+          <section data-markdown>
+            ## html5-api-exercise: history
+          </section>
+        </section>
+        <section>
           <section id="fragments">
             <h2>Fragments</h2>
             <p>Hit the next arrow...</p>
