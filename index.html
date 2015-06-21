@@ -1282,6 +1282,51 @@
           </section>
         </section>
         <section>
+          <section data-markdown>
+            ## web storage
+
+            - key/value store
+            - store anything serializable
+            - roughly 5MB storage per store
+
+            Note:
+
+            - use JSON to serialize objects
+            - use base64 to serialize blobs
+          </section>
+          <section data-markdown>
+            ## session storage
+
+            - persists during browser session
+            - persists across page navigation
+            - persists across page reload
+            - wiped on page/browser close
+          </section>
+          <section data-markdown>
+            ## local storage
+
+            - persists across browser restarts
+          </section>
+          <section data-markdown>
+            ## API
+
+            - `length` : number of saved items
+            - `key(index)` : retrieve key by index
+            - `getItem(key)`
+            - `setItem(key)`
+            - `removeItem(key)`
+            - `clear()`
+
+            Note:
+
+            - storage event in development
+            - can synchronize storage across pages
+            - must be same domain
+            - don't fire on source page
+          </section>
+        </section>
+
+        <section>
           <section id="fragments">
             <h2>Fragments</h2>
             <p>Hit the next arrow...</p>
