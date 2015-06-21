@@ -20,6 +20,11 @@
 .rwd-demo h1 {
   color: black;
 }
+
+.rwd-water .slide-background {
+  background-size: contain;
+}
+
 @media (min-width: 450px) {
   .rwd-demo h1 {
     color: red;
