@@ -1211,6 +1211,9 @@
             - dragstart/dragend are the dragged-element's duals to
             drop elements dragenter/dragleave
           </section>
+          <section data-markdown>
+            - [remy's demo](http://html5demos.com/drag)
+          </section>
         </section>
         <section>
           <section data-markdown>
@@ -1249,6 +1252,33 @@
             - be sure to check message origin. many widgets post messages
             - messages are async so sender won't know receipt status
             - windows can't share data: ownership is transferred if sent
+          </section>
+          <section data-markdown>
+            - [mdn demo](http://mdn.github.io/channel-messaging-basic-demo/)
+            - [mdn demo source](https://github.com/mdn/channel-messaging-basic-demo)
+            - [remy's demo](http://html5demos.com/postmessage)
+          </section>
+        </section>
+        <section>
+          <section data-markdown>
+            ## Geo API
+          </section>
+          <section data-markdown>
+            ## get coordinates
+
+            ``` js
+            navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
+            ```
+
+            returns `Position` object with:
+            - `coords` property
+              - `latitude`, `longitude`, `accuracy`,
+              - `altitude`, `altitudeAccuracy`,
+              - `heading`, `speed`
+            - `timestamp` (at which reading was taken)
+          </section>
+          <section data-markdown>
+            ## geo exercise
           </section>
         </section>
         <section>
