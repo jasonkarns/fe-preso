@@ -1501,6 +1501,165 @@
 
         </section>
 
+        <section>
+          <section data-markdown>
+            # Angular JS
+          </section>
+
+          <section data-markdown>
+            ## A History
+
+            1. vanilla JS, painful DOM
+            2. jquery
+            3. jquery spaghetti
+            4. backbone
+            5. angular
+            6. ember
+          </section>
+
+          <section data-markdown>
+            ## concepts
+
+            1. handlebars
+            2. built-in directives
+              - ng-app
+              - ng-model
+              - elements
+              - events
+          </section>
+
+          <section data-markdown>
+            ## ng-app
+
+            - angular's container
+            - typically on `html` or `body`
+            - can be multiple per page
+              - but only a single auto-bootstrapped instance
+              - manual bootstrapping: `angular.bootstrap(element, [modules])`
+          </section>
+          <section data-markdown>
+            ## ng-model
+
+            - binds HTML to JS objects
+            - 2-way databinding
+          </section>
+          <section data-markdown>
+            ## Exercise 1
+
+            - lineman run
+            - view localhost:8000
+          </section>
+          <section data-markdown>
+            ## setters/getters
+
+            ``` js
+            angular.module("appName", []);
+            angular.module("appName");
+            ```
+          </section>
+          <section data-markdown>
+            ## $scope
+
+            - exposes "stuff" to template/view
+            - inherits up through to $rootScope
+
+            ``` html
+            &lt;div ng-app=app>
+              &lt;div ng-controller=fooCtrl>
+                {{ bar }}
+                {{ baz }}
+              &lt;/div>
+            &lt;/div>
+            ```
+            ``` js
+            angular.module("app").controller("fooCtrl", function($scope) {
+              $scope.bar = "Hello World";
+              $scope.baz = function() {};
+            });
+            ```
+          </section>
+          <section data-markdown>
+            ## ng-repeat
+
+            ``` html
+            &lt;tr ng-repeat="soldier in soldiers">
+              &lt;td>{{soldier.name}}&lt;/td>
+              &lt;td>{{soldier.rank}}&lt;/td>
+            &lt;/tr>
+            ```
+
+            ``` js
+            $scope.soldiers = [
+              {name: "joe", rank: "major"},
+              {name: "jon", rank: "private"},
+              {name: "jane", rank: "captain"}
+            ];
+            ```
+
+          </section>
+          <section data-markdown>
+            ## Exercise 2
+
+            - lineman run
+            - localhost:8000/list.html
+          </section>
+          <section data-markdown>
+            ## ng-submit
+
+            ``` html
+            &lt;form ng-submit="submit(foo)">
+              &lt;input ng-model="foo" />
+            &lt;/form>
+            ```
+            ``` js
+            angular.module("app").controller("fooCtrl", function($scope) {
+              $scope.submit = function(foo){};
+            });
+            ```
+          </section>
+          <section data-markdown>
+            ## Exercise 3
+
+          </section>
+          <section data-markdown>
+            ## Dependency Injection
+
+            each angular module is a DI container
+
+            ```js
+            someModule.factory('greeter', function(){});
+            someModule.controller('MyController', ['$scope', 'greeter', function($scope, greeter) {
+              // ...
+            }]);
+            ```
+          </section>
+          <section data-markdown>
+          </section>
+          <section data-markdown>
+            ## special components
+
+            - controllers
+            - directives
+            - filters
+            - animations
+          </section>
+          <section data-markdown>
+            ## generic components
+
+            - provider
+            - value
+              static value
+            - constant
+              static value available during config phase
+            - factory
+              a function invoked by angular and injected with dependencies
+            - service
+              a factory function but invoked as a constructor
+          </section>
+
+
+        </section>
+
 
       </div>
 
