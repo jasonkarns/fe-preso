@@ -10,7 +10,7 @@ HTML5 API Exercises: https://github.com/jasonkarns/fe-html5-api-exercises
 
 Grunt: https://github.com/jasonkarns/fem-grunt-workflow
 
-Angular: https://github.com/jasonkarns/fem-grunt-workflow
+Angular: https://github.com/jasonkarns/oredev2014-angular
 
     - Exercise 1: My Name Is
       * [Video Walkthrough](http://youtu.be/Uf4wsJZtxBY)
@@ -27,5 +27,3 @@ Angular: https://github.com/jasonkarns/fem-grunt-workflow
       * [Video 4](http://youtu.be/2uqwy8lzk_4)
 
       * [Finished Example](https://github.com/testdouble/railsconf-test-drive-javascript/tree/master/02a_lineman_finish)
-
-
